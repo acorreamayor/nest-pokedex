@@ -9,8 +9,11 @@ async function bootstrap() {
     new ValidationPipe({ 
     whitelist: true, 
     forbidNonWhitelisted: true, 
+
+    transform: true,
     transformOptions: {
-      exposeUnsetFields: false
+      exposeUnsetFields: false,
+      enableImplicitConversion: true
     }
     }) 
    );
