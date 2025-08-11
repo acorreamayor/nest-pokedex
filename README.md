@@ -37,4 +37,18 @@ http://localhost:3000/api/seed
 * MongoDB
 * Nest
 
+# Compilacion en produccion
 
+1. Crear el archivo ```.end.prod```
+2. llenatr las variables de entorno para produccion
+3. Crear la nueva imagen
+```
+docker-compose -f docker-compose.prod.yml --env-file .env.prod up --build
+```
+
+# Notas
+## Heroku redeploy sin cambios:
+```
+git commit --allow-empty -m "Tigger Heroku deploy"
+git push heroku <master|main>
+```
